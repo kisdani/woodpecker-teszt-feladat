@@ -2069,7 +2069,7 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 window.jQuery = window.$ = (jquery__WEBPACK_IMPORTED_MODULE_0___default());
 jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
-  console.log('Működik a jQuery');
+  console.log('Jquery Test');
 });
 
 /***/ }),
