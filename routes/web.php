@@ -13,7 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'IndexController@home')->name('home');
+Route::get('/', 'IndexController@login')->name('home');
 Route::get('login', 'IndexController@login')->name('login');
-Route::get('register', 'UserController@register')->name('register');
-Route::get('list', 'UserListController@list')->name('list');
+Route::get('register', 'RegisterController@registerForm')->name('register');
+Route::get('list', 'UserListController@show')->name('list');
+
+Route::post('register', 'RegisterController@registerPost')->name('register_post');

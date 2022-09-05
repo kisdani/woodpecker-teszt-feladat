@@ -1,29 +1,20 @@
 @extends("main")
 
 @section("content")
-
-    <table class="table table-striped">
-        <tr>
-            <th>Name</th>
-            <th>Email</th>
-            <th>Password</th>
-        </th>
-        <tr>
-            <td>Test1</td>
-            <td>Email@email.com</td>
-            <td>asdasdasd123</td>
-        </tr>
-        <tr>
-            <td>Test2</td>
-            <td>Email@email.com</td>
-            <td>asdasdasd123</td>
-        </tr>
-        <tr>
-            <td>Test3</td>
-            <td>Email@email.com</td>
-            <td>asdasdasd123</td>
-        </tr>
-    </table>
-
-
+    <div class="center-table">
+        <table class="table table-striped">
+            <tr>
+                <th>Name</th>
+                <th>Created</th>
+                <th>Active</th>
+                </th>
+            @foreach ($users as $user)
+                <tr>
+                    <td>{{$user->name}}</td>
+                    <td>{{$user->created_at}}</td>
+                    <td>{{$user->updated_at}}</td>
+                </tr>
+            @endforeach
+        </table>
+    </div>
 @endsection

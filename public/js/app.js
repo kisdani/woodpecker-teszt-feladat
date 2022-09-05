@@ -2069,7 +2069,57 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 window.jQuery = window.$ = (jquery__WEBPACK_IMPORTED_MODULE_0___default());
 jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
-  console.log('Jquery Test');
+  // $('.alert').css('background', 'blue');
+  function printError(message) {
+    var element = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.alert');
+    element.text("");
+    element.show();
+    element.text(message);
+  }
+
+  function clearError() {
+    var element = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.alert');
+    element.css("display", "none");
+  }
+
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()('#first_form input[type=button]').click(function (e) {
+    var name = jquery__WEBPACK_IMPORTED_MODULE_0___default()('#name').val();
+    var password = jquery__WEBPACK_IMPORTED_MODULE_0___default()('#password').val();
+    var passwordConfirm = jquery__WEBPACK_IMPORTED_MODULE_0___default()('#confirm-password').val();
+    var nameRegx = /[a-zA-Z][a-zA-Z0-9-_]{3,32}/gi;
+    var passwordRegx = /^(?=.*\d)(?=.*[a-zA-Z]).{4,}$/gm;
+    var check = [];
+
+    if (password !== passwordConfirm) {
+      printError("Passwords do not match");
+      check.push("error");
+    }
+
+    if (password === "") {
+      printError("Please enter a password");
+      check.push("error");
+    } else {
+      if (passwordRegx.test(password) === false) {
+        printError("Please enter a valid password");
+        check.push("error");
+      }
+    }
+
+    if (name === "") {
+      printError("Please enter your name");
+      check.push("error");
+    } else {
+      if (nameRegx.test(name) === false) {
+        printError("Please enter a valid name");
+        check.push("error");
+      }
+    }
+
+    if (check.length < 1) {
+      clearError();
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()('#first_form').submit();
+    }
+  });
 });
 
 /***/ }),
