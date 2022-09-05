@@ -19,7 +19,7 @@ class RegisterController extends Controller
         $user->password = Hash::make($request->password);
         $user->save();
 
-        return view('pages/login');
+        $request->session()->flash('registered', 1);
+        return redirect('login');
     }
-
 }
