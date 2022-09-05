@@ -19,3 +19,4 @@ Route::get('register', 'RegisterController@registerForm')->name('register');
 Route::get('list', 'UserListController@show')->name('list');
 
 Route::post('register', 'RegisterController@registerPost')->name('register_post');
+Route::post('list', 'UserListController@registerPost')->name('register_list_post');

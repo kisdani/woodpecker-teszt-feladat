@@ -16,6 +16,10 @@ body {
 body .menu {
   background: #f8f9fa;
 }
+body .menu .alert-text {
+  color: #f20e30 !important;
+  display: none;
+}
 body .center {
   position: absolute;
   top: 50%;
@@ -116,5 +120,12 @@ body .center form input[type=button]:hover {
   transition: 0.5s;
 }
 body .center form .error {
-  color: #f20e30;
+  color: #f20e30 !important;
+}
+body .center form .pagination {
+  display: flex;
+  height: 60rem;
+}
+body .center form .pagination .pagination-list {
+  align-self: flex-end;
 }

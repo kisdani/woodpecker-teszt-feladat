@@ -25,9 +25,6 @@
         <div class="row content">
             <div class="col-sm-12 justify-content-center">@yield("content")</div>
         </div>
-        <footer class="container-fluid dark-bg">
-            @include("partials/footer")
-        </footer>
     </div>
 </body>
 </html>

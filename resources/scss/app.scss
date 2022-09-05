@@ -1,5 +1,5 @@
-$gradinet1:#2980b9;
-$gradinet2:#8e44ad;
+$gradient1:#2980b9;
+$gradient2:#8e44ad;
 $error:#f20e30;
 $gray:#adadad;
 $silver:#a6a6a6;
@@ -18,12 +18,17 @@ $light-blue:#e9f4fb;
 body{
     margin: 0;
     padding: 0;
-    background: linear-gradient(120deg,$gradinet1, $gradinet2);
+    background: linear-gradient(120deg,$gradient1, $gradient2);
     height: 100vh;
     overflow: hidden;
 
     .menu{
         background:$nav;
+
+        .alert-text {
+            color: $error !important;
+            display: none;
+        }
     }
 
     .center{
@@ -140,7 +145,16 @@ body{
             }
 
             .error {
-                color: $error;
+                color: $error !important;
+            }
+
+            .pagination{
+                display: flex;
+                height: 60rem;
+
+                .pagination-list{
+                    align-self: flex-end;
+                }
             }
         }
     }

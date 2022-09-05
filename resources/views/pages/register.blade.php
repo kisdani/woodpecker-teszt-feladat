@@ -4,7 +4,7 @@
 
         <div class="center">
             <h1>Registration</h1>
-            <form method="POST" id="first_form">
+            <form method="POST" id="register_form">
                 @csrf
                 <div class="txt_field">
                     <input type="text" id="name" name="name">
