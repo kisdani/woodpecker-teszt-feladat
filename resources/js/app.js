@@ -4,8 +4,6 @@ window.jQuery = window.$ = $;
 
 $(document).ready(function() {
 
-   // $('.alert').css('background', 'blue');
-
     function printError(message){
         let element = $('.alert');
         element.text("");
@@ -57,7 +55,5 @@ $(document).ready(function() {
             $('#first_form').submit();
         }
     });
-
-
 
 });

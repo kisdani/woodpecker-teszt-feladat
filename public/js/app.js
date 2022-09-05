@@ -2069,7 +2069,6 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 window.jQuery = window.$ = (jquery__WEBPACK_IMPORTED_MODULE_0___default());
 jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
-  // $('.alert').css('background', 'blue');
   function printError(message) {
     var element = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.alert');
     element.text("");
