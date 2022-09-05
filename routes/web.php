@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'LoginController@login')->name('home');
+Route::get('/', 'RegisterController@registerForm')->name('home');
 Route::get('login', 'LoginController@login')->name('login');
 Route::get('register', 'RegisterController@registerForm')->name('register');
 Route::get('list', 'UserListController@show')->name('list');
